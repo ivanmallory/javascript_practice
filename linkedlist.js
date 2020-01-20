@@ -36,7 +36,7 @@ class SLList{
             return console.log("This node is empty");
         }
         if (this.head === val) {
-            return console.log("the head node contains: " + val);
+            return console.log("The head node contains: " + val);
         }
         var runner = this.head;
         while (runner !== null) {
@@ -58,12 +58,12 @@ class SLList{
         return count;
     }
     display(){
-        var listValues = '';
+        var displayValues = '';
         var runner = this.head;
         while(runner != null){
-            listValues += runner.value.toString();
+            displayValues += runner.value.toString();
         }
-        return listValues;
+        return displayValues;
     }
     sllistMax(){
         var node = this.head;
