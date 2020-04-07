@@ -1,0 +1,88 @@
+.container{
+    width: 970px;
+    outline: 1px dotted red;
+    background-color: #1d355c;
+    padding: 10px;
+}
+.header{
+    width: 100%;
+    background-color: #cc323b;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}  
+.header h1{
+    margin: 0px;
+    padding: 15px 0 15px 15px;
+    color: #c2d6ec;
+}
+.navbar{
+    width: 180px;
+    background-color: #2f7d8b;
+    border-radius: 15px;
+    padding: 10px;
+    display:inline-block;
+    vertical-align: top;
+}
+.navbar ul{
+    padding-left: 20px;
+    margin: 0px;
+    color: #c2d6ec;
+}
+.navbar a{
+    color: #69dbde;
+    font-size: 12px;
+}
+.maincontent{
+    height: 550px;
+    width: 750px;
+    display: inline-block;
+    margin-left: 15px;
+    background-color:#0e1822;
+    border-radius: 15px;
+}
+.maincontent h2{
+    margin: 15px;
+    color: #c2d6ec;
+    padding-top: 15px;
+}
+.maincontent p{
+    margin: 15px;
+    padding: 15 px 0px 15px 15px;
+    color: #c2d6ec;
+    font-size: 14px;
+}
+.maincontent ul{
+    color: #c2d6ec;
+}
+.maincontent ul li p{
+    color: #c2d6ec;
+    font-size: 14px;
+    margin-left: 0px;
+}
+.maincontent ul li a{
+    color: #69dbde;
+    font-size: 14px;
+    text-align: left;
+}
+.maincontent ul li span{
+    color:#7278d5;
+    font-size: 14px;
+}
+.footer{
+    width: 100%;
+    height: 50px;
+    background-color: #5d6673;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+.footer p{
+    color: #c2d6ec;
+    font-size: 14px;
+    margin: 0px;
+    padding: 17px 0 15px 15px;
+}
+.footer a{
+    color: #69dbde;
+    font-size: 14px;
+}
+
