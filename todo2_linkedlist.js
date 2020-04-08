@@ -16,7 +16,7 @@ class SLList{
         this.head = null;
     }
     //SList: Second to Last Value
-    
+
     //Create a standalone function that, given a pointer to the first node in a singly linked list, will return the second-to-last value in that list. What will you return if the list is not long enough?   
     secondToLast(){
         var runner = this.head;
@@ -28,6 +28,9 @@ class SLList{
         }
         return runner.value;
     }
+    //SList: Copy
+
+    //Given a pointer to a singly linked list, return a copy of that list. Do not return the same list, but instead make a copy of each node in the list and connect them in the same order as the original.
     copy(){
         newList = new SLList();
         var runner = this.head;
@@ -37,6 +40,9 @@ class SLList{
         };
         return newList;
     }
+    // SList: Filter
+    
+    // Given a headNode, a lowVal and a highVal, remove from the list any nodes that have values less than lowVal or higher than highVal. Return the new list.
     filter(lowVal, highVal){
         var runner = this.head;
         while(runner != null && (runner.value < lowVal || runner.value > highVal)){
