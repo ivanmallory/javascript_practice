@@ -1,131 +1,127 @@
-function a(x,y){
-    return 5;
-  }
-  console.log(a(5,5))
-//Answer: 5
-
-function a(x,y){
-    z = []
-    z.push(x);
-    z.push(y);
-    z.push(5);
-    console.log(z);
-    return z;
+function multiply(x,y){
+    console.log(x);
+    console.log(y);
 }
-b = a(2,2)
-console.log(b);
-console.log(a(6,8));
-
-//Answer: 2,2,5,2,2,5,6,8,5,6,8,5
-
-function a(x){
-    z = [];
-    z.push(x);
-    z.pop();
-    z.push(x);
-    z.push(x);
-    return z;
- }
- y = a(2);
- y.push(5);
- console.log(y);
-
- //Answer: 2,2,5
-
-function a(x){
-    if(x[0] < x[1]) {
-       return true;
-    }
-    else {
-       return false;
-    }
-}
-b = a([2,3,4,5])
+b = multiply(2,3);
 console.log(b);
 
-//Answer: true
+//Answer: 2,3, undefined
 
-function a(x){
-    for(var i=0; i<x.length; i++){
-      if(x[i] > 0){
-           x[i] = "Coding"
-      }
-  }
+function multiply(x,y){
+    return x*y;
 }
-console.log(a([1,2,3,4]))
+b = multiply(2,3);
+console.log(b);
+console.log(multiply(5,2));
 
-//Answer: undefined
+//Answer: 6,10,10
 
-function a(x){
-    for(var i=0; i<x.length; i++){
-      if(x[i] > 5){
-           x[i] = "Coding"
-      }
-      else if(x[i] < 0){
-           x[i] = "Dojo"
-      }
-  }
+
+var x = [1,2,3,4,5,10];
+for(var i=0; i<5; i++)
+{
+   i = i + 3; 
+   console.log(i);
 }
-console.log(a([5,7,-1,4]))
 
-//Answer: undefined
+//Answer: 3,7
 
-function a(x){
-    if(x[0] > x[1]) {
-     return x[1];
-    }
-    return 10;
+var x=15;
+console.log(x);
+function awesome(){
+    var x=10;
+    console.log(x);
+}
+console.log(x);
+awesome();
+console.log(x);
+
+//Answer: 15, 15, 10, 15
+
+
+for(var i=0; i<15; i+=2){
+    console.log(i);
  }
- b = a([5,10])
- console.log(b);
 
- //Answer: 10
+//Answer: 0,2,4,6,8,10,12,14
 
- function sum(x){
-    sum = 0;
+ function looping(x,y){
+    for(var i=0; i<3; i++){
+       for(var j=0; j<3; j++){         
+           console.log(i*j);
+       } 
+    }
+ }
+ z = looping(3,3);
+ console.log(z);
+
+ //Answer: 0,0,0,0,1,2,0,2,4
+
+
+
+ function looping(x,y){
+    for(var i=0; i<3; i++){
+       for(var j=0; j<5; j++){         
+          console.log(i*j);
+       } 
+    }
+    return x*y;
+ }
+ z = looping(3,5);
+ console.log(z);
+
+ //Answer: 0,0,0,0,0,0,1,2,3,4,0,2,4,6,8,15
+
+
+//Part 2
+
+
+
+function printUpTo(x){
+    if(x < 0){
+        console.log("negative number");
+        return false;
+    }
+    else{
+        for(var i=1; i<=x; i++){
+            console.log(i);
+        }
+    }
+}
+  printUpTo(1000000);
+  y = printUpTo(-10);
+  console.log(y);
+
+function printSum(x){
+    var sum = 0
+    for(var i=0; i<=x; i++){
+        sum = sum + i;
+        console.log(i);
+    }
+    return sum
+    }
+y = printSum(255);
+console.log(y);
+
+function printSumArray(x){
+    var sum = 0;
     for(var i=0; i<x.length; i++){
-       sum = sum + x[i];
-       console.log(sum);
+        sum = sum + x[i]
     }
     return sum;
 }
-//Answer: undefined
+console.log(printSumArray([1,2,3]));
 
-function printAverage(x){
-    sum = 0
-    for(var i=0; i<x.length; i++){
-        sum = sum + x[i];
-    }
-    var avg = sum/x.length;
-    return avg;
-}
-
-y = printAverage([1,2,3]);
-console.log(y);
-
-y = printAverage([5,2,8])
-console.log(y);
-
-function returnOddArray(){
-    var arr = []
-    for(var i=1; i<=255; i++){
-        if(i % 2 == 1){
-            arr.push(i)
+function largestElement(x){
+    var largest = x[0]
+    for(var i=1; i<=x.length; i++){
+        if(x[i]>=largest){
+            largest = x[i];
         }
     }
-    return arr;
+    return largest;
 }
-y = returnOddArray();
+y = largestElement([1,30,5,7]);
 console.log(y);
 
-function squareValue(x){
-    for (var i=0; i<x.length; i++){
-        x[i] = x[i]*x[i];
-    }
-    return x;
- }
- y = squareValue([1,2,3]);
- console.log(y);
-   
- y = squareValue([2,5,8]);
- console.log(y);
+
