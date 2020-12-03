@@ -47,7 +47,7 @@ for(var i=0; i<15; i+=2){
 
  function looping(x,y){
     for(var i=0; i<3; i++){
-       for(var j=0; j<3; j++){         
+       for(var j=0; j<3; j++){        
            console.log(i*j);
        } 
     }
@@ -61,7 +61,7 @@ for(var i=0; i<15; i+=2){
 
  function looping(x,y){
     for(var i=0; i<3; i++){
-       for(var j=0; j<5; j++){         
+       for(var j=0; j<5; j++){        
           console.log(i*j);
        } 
     }
