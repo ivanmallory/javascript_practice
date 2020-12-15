@@ -82,3 +82,58 @@ function FindIntersection(strArr) {
 }
 // keep this function call here 
 console.log(FindIntersection(readline()));
+
+//Bracket Matcher
+
+//Have the function BracketMatcher(str) take the str parameter being passed and return 1 if the brackets are correctly matched and each one is accounted for. Otherwise return 0. For example: if str is "(hello (world))", then the output should be 1, but if str is "((hello (world))" the the output should be 0 because the brackets do not correctly match up. Only "(" and ")" will be used as brackets. If str contains no brackets return 1.
+
+//Examples
+//Input: "(coder)(byte))"
+//Output: 0
+//Input: "(c(oder)) b(yte)"
+//Output: 1
+
+function BracketMatcher(str){
+  const stack = [];
+
+  for(var i = 0; i < str.length; i++){
+    if(str[i] === '('){
+      stack.push('(');
+    }
+    else if(str[i] === ')'){
+        if(stack.length === 0){
+          return 0;
+        }
+        else{
+          stack.pop();
+        }
+    }
+  }
+  return stack.length === 0 ? 1 : 0;
+}
+
+//etter Capitalize
+
+//Have the function LetterCapitalize(str) take the str parameter being passed and capitalize the first letter of each word. Words will be separated by only one space.
+
+//Examples
+//Input: "hello world"
+//Output: Hello World
+//Input: "i ran there"
+//Output: I Ran There
+
+function LetterCapitalize(str) { 
+
+  // code goes here
+  var strArr = str.split('');
+  for(var i = 0; i < strArr.length; i++){
+    strArr[i] = strArr[i].split('');
+    strArr[i][0] = strArr[i][0].toUpperCase()
+    strArr[i] = strArr[i].join('');
+  }
+  strArr = strArr.join('');
+  return strArr; 
+
+}
+// keep this function call here 
+console.log(LetterCapitalize(readline()));
