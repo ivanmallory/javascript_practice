@@ -125,15 +125,61 @@ function BracketMatcher(str){
 function LetterCapitalize(str) { 
 
   // code goes here
-  var strArr = str.split('');
+  var strArr = str.split(" ");
   for(var i = 0; i < strArr.length; i++){
-    strArr[i] = strArr[i].split('');
+    strArr[i] = strArr[i].split("")
     strArr[i][0] = strArr[i][0].toUpperCase()
-    strArr[i] = strArr[i].join('');
+    strArr[i] = strArr[i].join("")
   }
-  strArr = strArr.join('');
+  strArr = strArr.join(" ");
   return strArr; 
 
 }
 // keep this function call here 
 console.log(LetterCapitalize(readline()));
+
+//Word Count
+//Have the function WordCount(str) take the str string parameter being passed and return the number of words the string contains (e.g. "Never eat shredded wheat or cake" would return 6). Words will be separated by single spaces.
+
+//Examples
+//Input: "Hello World"
+//Output: 2
+//Input: "one 22 three"
+//Output: 3
+
+function WordCount(str) { 
+
+  // code goes here
+  var strArr = str.split(' ');
+  var count = strArr.length;
+  return count; 
+
+}
+// keep this function call here 
+console.log(WordCount(readline()));
+
+//Binary Reversal
+
+//Have the function BinaryReversal(str) take the str parameter being passed, which will be a positive integer, take its binary representation (padded to the nearest N * 8 bits), reverse that string of bits, and then finally return the new reversed string in decimal form. For example: if str is "47" then the binary version of this integer is 101111 but we pad it to be 00101111. Your program should reverse this binary string which then becomes: 11110100 and then finally return the decimal version of this string, which is 244.
+
+//Examples
+//Input: "213"
+//Output: 171
+//Input: "4567"
+//Output: 60296
+
+function BinaryReversal(str) { 
+
+  // code goes here
+  var n = +str;
+  var binary = n.toString(2);
+  binary = binary.split('').reverse();
+  while(binary.length % 8 !== 0){
+    binary.push('0');
+  }
+  binary = binary.join('');
+  return String(Number.parseInt(binary,2));
+
+}
+// keep this function call here 
+console.log(BinaryReversal(readline()));
